@@ -1,0 +1,86 @@
+{
+    "author": "Christoph Guttandin",
+    "bin": {
+        "timing-provider-server": "./build/node/app.js"
+    },
+    "bugs": {
+        "url": "https://github.com/chrisguttandin/timing-provider-server/issues"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "fast-unique-numbers": "^5.0.12",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.5",
+        "ws": "^7.3.0",
+        "yargs": "^15.3.1"
+    },
+    "description": "A command line tool to spin up a server which can be used with the timing-provider.",
+    "devDependencies": {
+        "@babel/core": "^7.10.3",
+        "@babel/preset-env": "^7.10.3",
+        "@babel/register": "^7.10.3",
+        "@commitlint/cli": "^9.0.1",
+        "@commitlint/config-angular": "^9.0.1",
+        "@types/ws": "^7.2.5",
+        "@types/yargs": "^15.0.5",
+        "chai": "^4.2.0",
+        "commitizen": "^4.1.2",
+        "cz-conventional-changelog": "^3.2.0",
+        "eslint": "^7.2.0",
+        "eslint-config-holy-grail": "^47.0.5",
+        "grunt": "^1.1.0",
+        "grunt-babel": "^8.0.0",
+        "grunt-cli": "^1.3.2",
+        "grunt-contrib-clean": "^2.0.0",
+        "grunt-sh": "^0.2.0",
+        "husky": "^4.2.5",
+        "load-grunt-config": "^3.0.1",
+        "mocha": "^8.0.1",
+        "prettier": "^2.0.5",
+        "pretty-quick": "^2.0.1",
+        "sinon": "^9.0.2",
+        "sinon-chai": "^3.5.0",
+        "tsconfig-holy-grail": "^11.0.16",
+        "tslint": "^6.1.2",
+        "tslint-config-holy-grail": "^50.0.4"
+    },
+    "engines": {
+        "node": ">=10.15.3"
+    },
+    "files": [
+        "build/es2019/",
+        "build/node/",
+        "src/"
+    ],
+    "homepage": "https://github.com/chrisguttandin/timing-provider-server",
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint --edit --extends @commitlint/config-angular",
+            "pre-commit": "pretty-quick --config config/prettier/config.json --staged && grunt lint"
+        }
+    },
+    "keywords": [
+        "Timing Object",
+        "Timing Provider",
+        "synchronisation",
+        "timing",
+        "timingsrc",
+        "webtiming"
+    ],
+    "license": "MIT",
+    "name": "timing-provider-server",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chrisguttandin/timing-provider-server.git"
+    },
+    "scripts": {
+        "prepublishOnly": "grunt build",
+        "start": "node build/node/app.js",
+        "test": "grunt test"
+    },
+    "version": "0.0.0"
+}
