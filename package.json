@@ -82,5 +82,5 @@
         "start": "node build/node/app.js",
         "test": "grunt test"
     },
-    "version": "1.0.13"
+    "version": "1.0.14"
 }
