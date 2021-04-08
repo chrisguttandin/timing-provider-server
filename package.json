@@ -42,7 +42,7 @@
         "mocha": "^8.3.2",
         "prettier": "^2.2.1",
         "pretty-quick": "^3.1.0",
-        "sinon": "^10.0.0",
+        "sinon": "^10.0.1",
         "sinon-chai": "^3.6.0",
         "tsconfig-holy-grail": "^11.0.49",
         "tslint": "^6.1.3",
