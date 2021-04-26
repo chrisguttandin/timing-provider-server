@@ -12,7 +12,7 @@
         }
     },
     "dependencies": {
-        "fast-unique-numbers": "^5.0.31",
+        "fast-unique-numbers": "^5.0.33",
         "tslib": "^2.2.0",
         "typescript": "^4.2.4",
         "ws": "^7.4.5",
