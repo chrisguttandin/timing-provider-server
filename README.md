@@ -2,7 +2,6 @@
 
 **A command line tool to spin up a server which can be used with the timing-provider.**
 
-[![tests](https://img.shields.io/travis/chrisguttandin/timing-provider-server/master.svg?style=flat-square)](https://travis-ci.org/chrisguttandin/timing-provider-server)
 [![dependencies](https://img.shields.io/david/chrisguttandin/timing-provider-server.svg?style=flat-square)](https://www.npmjs.com/package/timing-provider-server)
 [![version](https://img.shields.io/npm/v/timing-provider-server.svg?style=flat-square)](https://www.npmjs.com/package/timing-provider-server)
 
