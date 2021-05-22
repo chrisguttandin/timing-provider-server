@@ -10,7 +10,7 @@ if (require.main !== module) {
 }
 
 (async () => {
-    const { port } = (<yargs.Argv<ICommandLineArguments>>yargs)
+    const commandLineArguments = (<yargs.Argv<ICommandLineArguments>>yargs)
         .help()
         .option('port', {
             default: 2276,
@@ -19,6 +19,11 @@ if (require.main !== module) {
         })
         .strict().argv;
 
+    if (commandLineArguments instanceof Promise) {
+        throw new Error('The command line arguments are expected to get parsed synchronously.');
+    }
+
+    const { port } = commandLineArguments;
     const activeConnections = new Map<number, (message: object) => void>();
     const server = new Server({ port });
 
