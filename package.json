@@ -16,7 +16,7 @@
         "tslib": "^2.3.1",
         "typescript": "^4.4.3",
         "ws": "^8.2.2",
-        "yargs": "^17.1.1"
+        "yargs": "^17.2.1"
     },
     "description": "A command line tool to spin up a server which can be used with the timing-provider.",
     "devDependencies": {
