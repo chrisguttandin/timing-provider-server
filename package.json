@@ -48,7 +48,7 @@
         "node": ">=12.20.1"
     },
     "files": [
-        "build/es2019/",
+        "build/es2020/",
         "build/node/",
         "src/"
     ],
@@ -68,7 +68,7 @@
         "url": "https://github.com/chrisguttandin/timing-provider-server.git"
     },
     "scripts": {
-        "build": "rimraf build/* && tsc --project src/tsconfig.json && babel ./build/es2019 --config-file ./config/babel/build.json --out-dir ./build/node",
+        "build": "rimraf build/* && tsc --project src/tsconfig.json && babel ./build/es2020 --config-file ./config/babel/build.json --out-dir ./build/node",
         "lint": "npm run lint:config && npm run lint:src && npm run lint:test",
         "lint:config": "eslint --config config/eslint/config.json --ext .js --report-unused-disable-directives config/",
         "lint:src": "tslint --config config/tslint/src.json --project src/tsconfig.json src/*.ts src/**/*.ts",
@@ -80,5 +80,6 @@
         "test:integration": "if [[ ${TYPE} == \"\" || ${TYPE} == \"integration\" ]]; then mocha --bail --parallel --recursive --require config/mocha/config-integration.js test/integration; fi",
         "test:unit": "if [[ ${TYPE} == \"\" || ${TYPE} == \"unit\" ]]; then mocha --bail --parallel --recursive --require config/mocha/config-unit.js test/unit; fi"
     },
+    "type": "module",
     "version": "2.0.16"
 }

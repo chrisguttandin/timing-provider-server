@@ -1,16 +1,13 @@
 #!/usr/bin/env node
 
 import { generateUniqueNumber } from 'fast-unique-numbers';
-import { Server } from 'ws';
+import { argv } from 'process';
+import * as WebSocket from 'ws';
 import yargs from 'yargs';
 import { ICommandLineArguments } from './interfaces';
 
-if (require.main !== module) {
-    throw new Error('This script is meant to be executed from the command line.');
-}
-
 (async () => {
-    const commandLineArguments = (<yargs.Argv<ICommandLineArguments>>yargs)
+    const commandLineArguments = (<yargs.Argv<ICommandLineArguments>>yargs(argv.slice(2)))
         .help()
         .option('port', {
             default: 2276,
@@ -25,7 +22,7 @@ if (require.main !== module) {
 
     const { port } = commandLineArguments;
     const activeConnections = new Map<number, (message: object) => void>();
-    const server = new Server({ port });
+    const server = new WebSocket.Server({ port });
 
     server.on('connection', (connection) => {
         const id = generateUniqueNumber(activeConnections);
