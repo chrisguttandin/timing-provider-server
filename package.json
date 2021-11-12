@@ -81,5 +81,5 @@
         "test:unit": "if [[ ${TYPE} == \"\" || ${TYPE} == \"unit\" ]]; then mocha --bail --parallel --recursive --require config/mocha/config-unit.js test/unit; fi"
     },
     "type": "module",
-    "version": "2.0.16"
+    "version": "3.0.0"
 }
