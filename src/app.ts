@@ -2,7 +2,7 @@
 
 import { generateUniqueNumber } from 'fast-unique-numbers';
 import { argv } from 'process';
-import ws from 'ws';
+import { WebSocketServer } from 'ws';
 import yargs from 'yargs';
 import { ICommandLineArguments } from './interfaces';
 
@@ -22,7 +22,7 @@ import { ICommandLineArguments } from './interfaces';
 
     const { port } = commandLineArguments;
     const activeConnections = new Map<number, (message: object) => void>();
-    const server = new ws.Server({ port });
+    const server = new WebSocketServer({ port });
 
     server.on('connection', (connection) => {
         const id = generateUniqueNumber(activeConnections);
