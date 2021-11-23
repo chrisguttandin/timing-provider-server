@@ -11,6 +11,12 @@
             "path": "cz-conventional-changelog"
         }
     },
+    "contributors": [
+        {
+            "email": "marcus.schreiter@meso.design",
+            "name": "Marcus Schreiter"
+        }
+    ],
     "dependencies": {
         "fast-unique-numbers": "^6.0.9",
         "tslib": "^2.3.1",
