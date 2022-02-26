@@ -1,1 +1,1 @@
-export * from './command-line-arguments';
+export * from './command-line-arguments.js';
