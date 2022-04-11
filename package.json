@@ -33,7 +33,7 @@
         "@commitlint/cli": "^16.2.3",
         "@commitlint/config-angular": "^16.2.3",
         "@types/ws": "^8.5.3",
-        "@types/yargs": "^17.0.9",
+        "@types/yargs": "^17.0.10",
         "chai": "^4.3.6",
         "commitizen": "^4.2.4",
         "cz-conventional-changelog": "^3.3.0",
