@@ -39,7 +39,7 @@ server.on('connection', (connection) => {
         const sendMessageToActiveConnection = activeConnections.get(parsedMessage.client.id);
 
         if (sendMessageToActiveConnection !== undefined) {
-            sendMessageToActiveConnection({ client: { id }, message: parsedMessage.message });
+            sendMessageToActiveConnection({ ...parsedMessage, client: { id } });
         }
     });
 
@@ -47,11 +47,15 @@ server.on('connection', (connection) => {
 
     for (const activeConnection of activeConnections) {
         if (activeConnection[0] !== id) {
-            const label = [id, activeConnection[0]].sort().join('-');
+            const ids = [id, activeConnection[0]].sort();
+            const label = ids.join('-');
             const type = 'request';
 
-            sendMessage({ message: { isActive: true, label, mask: { client: { id: activeConnection[0] } } }, type });
-            activeConnection[1]({ message: { isActive: false, mask: { client: { id } } }, type });
+            if (ids[0] === id) {
+                sendMessage({ client: { id: activeConnection[0] }, label, type });
+            } else {
+                activeConnection[1]({ client: { id }, label, type });
+            }
         }
     }
 });
