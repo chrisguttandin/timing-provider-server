@@ -23,11 +23,16 @@ const { port } = commandLineArguments;
 const activeConnections = new Map<number, (message: object) => void>();
 const server = new WebSocketServer({ port });
 
+let origin = 0;
+
 server.on('connection', (connection) => {
     const id = generateUniqueNumber(activeConnections);
     const sendMessage = (message: object) => connection.send(JSON.stringify(message));
 
     activeConnections.set(id, sendMessage);
+    sendMessage({ origin, type: 'init' });
+
+    origin += 1;
 
     connection.on('message', (message) => {
         const parsedMessage = JSON.parse(message.toString());
