@@ -2,7 +2,6 @@
 
 **A command line tool to spin up a server which can be used with the timing-provider.**
 
-[![dependencies](https://img.shields.io/david/chrisguttandin/timing-provider-server.svg?style=flat-square)](https://github.com/chrisguttandin/timing-provider-server/network/dependencies)
 [![version](https://img.shields.io/npm/v/timing-provider-server.svg?style=flat-square)](https://www.npmjs.com/package/timing-provider-server)
 
 This command line tool spins up a server which can be used as the signaling server for the [timing-provider](https://github.com/chrisguttandin/timing-provider).
