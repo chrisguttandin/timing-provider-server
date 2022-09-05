@@ -27,7 +27,7 @@
     "description": "A command line tool to spin up a server which can be used with the timing-provider.",
     "devDependencies": {
         "@babel/cli": "^7.18.10",
-        "@babel/core": "^7.18.5",
+        "@babel/core": "^7.18.13",
         "@babel/preset-env": "^7.18.2",
         "@babel/register": "^7.17.7",
         "@commitlint/cli": "^17.0.2",
