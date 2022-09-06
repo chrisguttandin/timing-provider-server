@@ -20,7 +20,7 @@ Afterwards the server can be started by executing the following command:
 timing-provider-server
 ```
 
-It is also possible to execute the command above without installing a local version of this package like this:
+It is also possible to run the command above without explicitly installing a local version of this package first like this:
 
 ```shell
 npx timing-provider-server
