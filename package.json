@@ -18,7 +18,7 @@
         }
     ],
     "dependencies": {
-        "fast-unique-numbers": "^6.0.24",
+        "fast-unique-numbers": "^6.0.25",
         "tslib": "^2.4.1",
         "typescript": "^4.9.3",
         "ws": "^8.11.0",
