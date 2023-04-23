@@ -49,7 +49,7 @@
         "tsconfig-holy-grail": "^13.0.1"
     },
     "engines": {
-        "node": ">=14.15.4"
+        "node": ">=16.1.0"
     },
     "files": [
         "build/es2020/",
