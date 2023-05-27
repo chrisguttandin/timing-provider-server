@@ -46,7 +46,7 @@
         "rimraf": "^5.0.1",
         "sinon": "^15.1.0",
         "sinon-chai": "^3.7.0",
-        "tsconfig-holy-grail": "^14.0.0"
+        "tsconfig-holy-grail": "^14.0.3"
     },
     "engines": {
         "node": ">=16.1.0"
