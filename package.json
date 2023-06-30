@@ -29,7 +29,7 @@
         "@babel/cli": "^7.22.5",
         "@babel/core": "^7.22.5",
         "@babel/preset-env": "^7.22.5",
-        "@babel/register": "^7.21.0",
+        "@babel/register": "^7.22.5",
         "@commitlint/cli": "^17.6.3",
         "@commitlint/config-angular": "^17.6.3",
         "@types/ws": "^8.5.4",
