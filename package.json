@@ -20,7 +20,7 @@
     "dependencies": {
         "fast-unique-numbers": "^8.0.5",
         "tslib": "^2.6.0",
-        "typescript": "^5.0.4",
+        "typescript": "^5.1.6",
         "ws": "^8.13.0",
         "yargs": "^17.7.2"
     },
