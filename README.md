@@ -4,7 +4,7 @@
 
 [![version](https://img.shields.io/npm/v/timing-provider-server.svg?style=flat-square)](https://www.npmjs.com/package/timing-provider-server)
 
-This command line tool spins up a server which can be used as the signaling server for the [timing-provider](https://github.com/chrisguttandin/timing-provider).
+This command line tool spins up a server which can be used as the signaling server for the [timing-provider](https://github.com/chrisguttandin/timing-provider). It is primarily intended for local testing.
 
 ## Usage
 
