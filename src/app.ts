@@ -30,7 +30,7 @@ server.on('connection', (connection) => {
     const sendMessage = (message: object) => connection.send(JSON.stringify(message));
 
     activeConnections.set(id, sendMessage);
-    sendMessage({ events: [], origin, type: 'init' });
+    sendMessage({ client: { id }, events: [], origin, type: 'init' });
 
     origin += 1;
 
