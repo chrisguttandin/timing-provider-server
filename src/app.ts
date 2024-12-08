@@ -38,7 +38,9 @@ server.on('connection', (connection) => {
         const parsedMessage = JSON.parse(message.toString());
         const sendMessageToActiveConnection = activeConnections.get(parsedMessage.client.id);
 
-        if (sendMessageToActiveConnection !== undefined && parsedMessage.type !== 'check') {
+        if (sendMessageToActiveConnection === undefined) {
+            sendMessage({ client: parsedMessage.client, type: 'termination' });
+        } else if (parsedMessage.type !== 'check') {
             sendMessageToActiveConnection({ ...parsedMessage, client: { id } });
         }
     });
