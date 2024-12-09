@@ -47,16 +47,16 @@ server.on('connection', (connection) => {
 
     connection.on('close', () => activeConnections.delete(id));
 
-    for (const activeConnection of activeConnections) {
-        if (activeConnection[0] !== id) {
-            const ids = [id, activeConnection[0]].sort();
+    for (const [clientIdOfActiveConnection, sendMessageToActiveConnection] of activeConnections) {
+        if (clientIdOfActiveConnection !== id) {
+            const ids = [id, clientIdOfActiveConnection].sort();
             const label = ids.join('-');
             const type = 'request';
 
             if (ids[0] === id) {
-                sendMessage({ client: { id: activeConnection[0] }, label, type });
+                sendMessage({ client: { id: clientIdOfActiveConnection }, label, type });
             } else {
-                activeConnection[1]({ client: { id }, label, type });
+                sendMessageToActiveConnection({ client: { id }, label, type });
             }
         }
     }
