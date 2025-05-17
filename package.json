@@ -21,7 +21,7 @@
         "fast-unique-numbers": "^9.0.21",
         "tslib": "^2.8.1",
         "typescript": "^5.8.3",
-        "ws": "^8.18.1",
+        "ws": "^8.18.2",
         "yargs": "^17.7.2"
     },
     "description": "A command line tool to spin up a server which can be used with the timing-provider.",
