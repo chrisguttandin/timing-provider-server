@@ -36,6 +36,11 @@ server.on('connection', (connection) => {
 
     connection.on('message', (message) => {
         const parsedMessage = JSON.parse(message.toString());
+
+        if (parsedMessage.client === undefined) {
+            return;
+        }
+        
         const sendMessageToActiveConnection = activeConnections.get(parsedMessage.client.id);
 
         if (sendMessageToActiveConnection === undefined) {
